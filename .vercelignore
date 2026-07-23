@@ -5,8 +5,12 @@ signups.db-journal
 signups.db-wal
 signups.db-shm
 .git
-ds
-assets
-AloraAI Landing Page.dc.html
-support.js
-image-slot.js
+
+# Root-only reference files (anchored with a leading slash so these patterns
+# do NOT also match public/assets — that folder holds the real site images
+# and the demo video and must be deployed).
+/ds
+/assets
+/AloraAI Landing Page.dc.html
+/support.js
+/image-slot.js
