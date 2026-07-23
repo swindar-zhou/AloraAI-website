@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <script src="./image-slot.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: oklch(97.5% 0.014 85); font-family: 'Inter', sans-serif; }
+    a { color: oklch(34% 0.05 155); text-decoration: none; }
+    a:hover { color: oklch(26% 0.05 155); }
+    ::selection { background: oklch(85% 0.06 155); }
+  </style>
+</helmet>
+
+<div style="width:100%; color: oklch(22% 0.02 150); overflow-x: hidden;">
+
+  <!-- IMMERSIVE FULL-SCREEN HERO -->
+  <div style="position:relative; height:100vh; min-height:600px; overflow:hidden;">
+    <div style="position:absolute; inset:0;">
+      <img src="assets/hero-nurse.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block; object-position: center {{ heroImagePosition }};">
+    </div>
+    <div style="position:absolute; inset:0; background: linear-gradient(180deg, oklch(14% 0.03 150 / 0.35) 0%, oklch(14% 0.03 150 / 0.1) 30%, oklch(14% 0.03 150 / 0.35) 60%, oklch(12% 0.03 150 / 0.85) 100%); pointer-events:none;"></div>
+
+    <!-- overlay nav -->
+    <div style="position:absolute; top:0; left:0; right:0; z-index:2; display:flex; align-items:center; justify-content:space-between; max-width:1240px; margin:0 auto; padding:28px 32px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        
+        <span style="font-family:'Newsreader', serif; font-size:20px; font-weight:600; letter-spacing:-0.01em; color:white;">AloraAI</span>
+      </div>
+
+    </div>
+
+    <!-- headline -->
+    <div style="position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:flex-end; max-width:1240px; margin:0 auto; padding:0 32px 180px;">
+      <h1 style="font-family:'Newsreader', serif; font-size:clamp(34px, 5vw, 60px); line-height:1.1; font-weight:500; letter-spacing:-0.01em; margin:0; color: white; max-width:760px;">
+        This is 1962. Finding a psychiatric bed still works exactly like this in 2026.
+      </h1><div style="display: flex; align-items: center; gap: 16px; margin-top: 28px">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+
+  
+
+  <!-- PROBLEM FRAMING -->
+  <div style="background: white; border-top:1px solid oklch(92% 0.015 85); border-bottom:1px solid oklch(92% 0.015 85);">
+    
+  </div>
+
+  <!-- HOW IT WORKS -->
+  
+
+  <!-- LIVE PRODUCT VISUAL (single, cropped, no patient data) -->
+  <div id="how" style="max-width:1180px; margin:0 auto; padding:100px 32px;">
+    <div style="max-width:1000px; margin:0 auto; padding:88px 32px; display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; align-items:start;">
+      
+      <div>
+        <span style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color: oklch(45% 0.05 155);">The status quo</span>
+        <h2 style="font-family: 'Newsreader', serif; font-size: 32px; font-weight: 500; line-height: 1.2; margin: 14px 0 18px; color: oklch(20% 0.03 160); width: 684px; height: 114px">
+          Right now, finding a bed means calling facilities one by one.
+        </h2>
+        <div style="display:flex; flex-direction:column; gap:16px; font-size:16.5px; line-height:1.7; color: oklch(40% 0.02 160);">
+          <p style="margin:0;">
+            A patient is ready to step down, and a case manager starts working the phones, hoping the bed count someone quoted last week is still true, and that this facility still takes the patient's payer.
+          </p>
+          <p style="margin:0;">
+            By the time a placement lands, the same facts have been re-learned from scratch, on hold, more than once. Nothing about that call gets remembered for the next case manager.
+          </p>
+        </div>
+      </div>
+    </div><div style="text-align:center; max-width:640px; margin:0 auto 56px;">
+      <span style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color: oklch(45% 0.05 155);">How it works</span>
+      <h2 style="font-family:'Newsreader', serif; font-size:34px; font-weight:500; margin:14px 0 0; color: oklch(20% 0.03 160);">Alora does two things on every call.</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div style="background:white; border:1px solid oklch(91% 0.02 85); border-radius:18px; padding:36px;">
+        <div style="width:40px; height:40px; border-radius:10px; background: oklch(93% 0.03 155); color: oklch(32% 0.05 155); display:flex; align-items:center; justify-content:center; font-family:'Newsreader', serif; font-weight:600; font-size:18px;">1</div>
+        <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:20px 0 10px; color: oklch(20% 0.03 160);">A living map of the network</h3>
+        <p style="font-size:15.5px; line-height:1.65; color: oklch(42% 0.02 160); margin:0;">
+          Alora sits in on placement calls and understands what each facility says about open beds, waitlists, payers, and intake requirements, then writes verified facts into a shared, always current map. A human approves every update.
+        </p>
+      </div>
+      <div style="background:white; border:1px solid oklch(91% 0.02 85); border-radius:18px; padding:36px;">
+        <div style="width:40px; height:40px; border-radius:10px; background: oklch(93% 0.06 60); color: oklch(45% 0.1 55); display:flex; align-items:center; justify-content:center; font-family:'Newsreader', serif; font-weight:600; font-size:18px;">2</div>
+        <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:20px 0 10px; color: oklch(20% 0.03 160);">Chart-grounded matching</h3>
+        <p style="font-size:15.5px; line-height:1.65; color: oklch(42% 0.02 160); margin:0;">
+          Alora diffs each patient's clinical record against every facility's real requirements, rides along on the call, and surfaces chart-grounded answers, flagging anything the record doesn't support.
+        </p>
+      </div>
+    </div>
+  </div><div id="network" style="background: oklch(22% 0.03 165); color: white;">
+    <div style="max-width:1000px; margin:0 auto; padding:100px 32px;">
+      <div style="text-align:center; max-width:600px; margin:0 auto 48px;">
+        <span style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color: oklch(80% 0.05 155);">Live in the workspace</span>
+        <h2 style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; margin: 14px 0 0; width: 637px; height: 63px">Every fact traces back to a call and a person.</h2>
+        <p style="font-size:16px; color: oklch(85% 0.015 165); margin:14px 0 0; line-height:1.6;">
+          The network map re-ranks itself as capacity and requirements change, never further than a click from the source that set it.
+        </p>
+      </div>
+      <div style="border-radius:16px; overflow:hidden; border:1px solid oklch(38% 0.02 165); max-width:720px; margin:0 auto;">
+        <img src="assets/network-graph.png" alt="AloraAI live network map of San Francisco behavioral health facilities" style="width:100%; display:block;">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: {{ lastTwoSpacing }}px; background: oklch(97.5% 0.014 85);"></div>
+
+  <!-- FINAL CTA BANNER -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px 110px;" id="contact">
+    <div style="background: oklch(32% 0.05 155); border-radius:24px; padding:72px 56px; text-align:center;">
+      <h2 style="font-family: 'Newsreader', serif; font-size: 36px; font-weight: 500; margin: 0 auto; max-width: 620px; line-height: 1.2; color: white; width: 560px; height: 151px">
+        Built for anywhere case managers face this problem. If you place patients, let's talk.
+      </h2>
+      <div style="margin-top:32px;">
+        <a href="mailto:hello@alora.ai" style="background: white; color: oklch(28% 0.05 155); padding: 15px 32px; border-radius: 100px; font-size: 15.5px; font-weight: 600; width: 80px; height: 23px" style-hover="background: oklch(92% 0.01 85);">Talk to us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid oklch(92% 0.015 85);">
+    <div style="max-width:1180px; margin:0 auto; padding:32px; display:flex; align-items:center; justify-content:space-between; font-size:13.5px; color: oklch(52% 0.015 160); flex-wrap:wrap; gap:12px;">
+      <span style="font-family:'Newsreader', serif; font-size:16px; font-weight:600; color: oklch(28% 0.03 160);">AloraAI</span>
+      <span>A human approves every graph update and makes every clinical decision. No patient data leaves the hospital's own retention.</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;heroImagePosition&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;25%&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Hero&quot;},
+  &quot;section1to2Spacing&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 64, &quot;min&quot;: 0, &quot;max&quot;: 240, &quot;step&quot;: 8, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Spacing&quot;},
+  &quot;lastTwoSpacing&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 64, &quot;min&quot;: 0, &quot;max&quot;: 240, &quot;step&quot;: 8, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Spacing&quot;},
+  &quot;navContactLink&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;#contact&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Navigation&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      heroImagePosition: this.props.heroImagePosition ?? '25%',
+      section1to2Spacing: this.props.section1to2Spacing ?? 64,
+      lastTwoSpacing: this.props.lastTwoSpacing ?? 64,
+      navContactLink: this.props.navContactLink ?? '#contact',
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "aloraai-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AloraAI landing page + clinician pilot sign-up backend",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --env-file-if-exists=.env --watch server.js"
+  }
+}
