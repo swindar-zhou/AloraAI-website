@@ -26,22 +26,113 @@
         <a href="#problem">The problem</a>
         <a href="#how">How it works</a>
         <a href="#demo">Demo</a>
-        <a href="#join" class="btn btn-light">Join the pilot</a>
+        <a href="#join" class="btn btn-light">Help us build it</a>
       </div>
     </nav>
 
     <div class="hero-content">
       <h1>This is 1962. Finding a psychiatric bed still works exactly like this in 2026.</h1>
-      <p class="hero-sub">
-        Alora turns every placement call into a living, sourced map of the network, and finds the beds that
-        actually fit your patient, before you pick up the phone.
-      </p>
       <div class="hero-cta">
-        <a href="#join" class="btn btn-primary">Join the clinician pilot</a>
-        <a href="#demo" class="btn btn-ghost-light">Watch the 7-second demo</a>
+        <a href="#join" class="btn btn-primary">Help us build it</a>
       </div>
     </div>
   </header>
+
+  <!-- ============ PILOT: demo (left) + join the pilot (right) ============ -->
+  <section class="section pilot">
+    <div class="container">
+      <p class="pilot-lead">
+        Alora turns every placement call into a living map of the network, and finds the beds that fit
+        your patient before you dial.
+      </p>
+      <div class="pilot-grid">
+
+        <!-- LEFT — demo video -->
+        <div class="pilot-demo" id="demo">
+          <div class="pilot-col-head">
+            <span class="eyebrow">See it work</span>
+            <h2>Seven seconds inside Alora.</h2>
+            <p>How a placement search actually plays out.</p>
+          </div>
+          <div class="demo-frame">
+            <video
+              src="/assets/alora-demo.mp4"
+              poster="/assets/alora-demo-poster.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              controls>
+              Your browser doesn't support embedded video.
+              <a href="/assets/alora-demo.mp4">Download the demo</a>.
+            </video>
+          </div>
+          <p class="demo-caption">De-identified product footage. No patient data shown.</p>
+        </div>
+
+        <!-- RIGHT — join the pilot -->
+        <div class="pilot-join" id="join">
+          <div class="signup-card">
+            <!-- form -->
+            <div id="signup-form-wrap">
+              <div class="signup-head">
+                <span class="eyebrow">Help us build it</span>
+                <h2>Help us build Alora.</h2>
+                <p>
+                  We're building this with a few clinicians who place patients. Leave your details and we'll
+                  set up 20 minutes to hear how you work.
+                </p>
+              </div>
+
+              <form id="signup-form" novalidate>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
+                  </div>
+                  <div class="field">
+                    <label for="email">Work email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
+                  </div>
+                  <div class="field">
+                    <label for="organization">Where you work <span class="opt">(optional)</span></label>
+                    <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
+                  </div>
+                  <div class="field">
+                    <label for="location">Location <span class="opt">(optional)</span></label>
+                    <input type="text" id="location" name="location" placeholder="City or region you place in">
+                  </div>
+                  <div class="field full">
+                    <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" id="signup-submit">Help us build it</button>
+                  <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+                  <p class="form-note">
+                    No patient data, no spam. Unsubscribe any time.
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <!-- success -->
+            <div id="signup-success" class="signup-success hidden">
+              <div class="check" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <h3>Thanks!</h3>
+              <p>We'll email you to set up 20 minutes. Talk soon.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== PROBLEM ===================== -->
   <section class="problem" id="problem">
@@ -130,92 +221,6 @@
             <h3>Audit-ready by design</h3>
             <p>Every fact traces back to a specific call, a person, and a timestamp. A human approves each update and makes every clinical decision. No patient data leaves your retention.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DEMO VIDEO ===================== -->
-  <section class="section demo" id="demo">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">See it work</span>
-        <h2>Seven seconds inside the workspace.</h2>
-        <p>A quick look at how a placement search plays out in Alora.</p>
-      </div>
-      <div class="demo-frame">
-        <video
-          src="/assets/alora-demo.mp4"
-          poster="/assets/alora-demo-poster.jpg"
-          controls
-          playsinline
-          preload="metadata"
-          muted
-          loop>
-          Your browser doesn't support embedded video.
-          <a href="/assets/alora-demo.mp4">Download the demo</a>.
-        </video>
-      </div>
-      <p class="demo-caption">De-identified product footage. No patient data shown.</p>
-    </div>
-  </section>
-
-  <!-- ===================== SIGN-UP ===================== -->
-  <section class="section signup" id="join">
-    <div class="container">
-      <div class="signup-card">
-        <!-- form -->
-        <div id="signup-form-wrap">
-          <div class="signup-head">
-            <span class="eyebrow">Join the pilot</span>
-            <h2>Work with us on the next placement.</h2>
-            <p>
-              We're partnering with a small group of clinicians and case managers who place patients and want to
-              help shape how Alora works. Two fields to start, and we'll reach out personally.
-            </p>
-          </div>
-
-          <form id="signup-form" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
-              </div>
-              <div class="field">
-                <label for="email">Work email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
-              </div>
-              <div class="field">
-                <label for="organization">Where you work <span class="opt">(optional)</span></label>
-                <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
-              </div>
-              <div class="field">
-                <label for="location">Location <span class="opt">(optional)</span></label>
-                <input type="text" id="location" name="location" placeholder="City or region you place in">
-              </div>
-              <div class="field full">
-                <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
-                <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary" id="signup-submit">Request pilot access</button>
-              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
-              <p class="form-note">
-                We only use this to reach out about the pilot. No patient data, no spam, unsubscribe any time.
-              </p>
-            </div>
-          </form>
-        </div>
-
-        <!-- success -->
-        <div id="signup-success" class="signup-success hidden">
-          <div class="check" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </div>
-          <h3>You're on the list.</h3>
-          <p>Thanks. We'll reach out personally about joining the pilot. Keep an eye on your inbox.</p>
         </div>
       </div>
     </div>

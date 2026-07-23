@@ -114,7 +114,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 .hero-content {
   position: relative; z-index: 2; height: 100%;
   display: flex; flex-direction: column; justify-content: flex-end;
-  max-width: 1240px; margin: 0 auto; padding: 0 var(--pad) 128px;
+  max-width: 1240px; margin: 0 auto; padding: 0 var(--pad) 56px;
 }
 .hero h1 {
   color: white;
@@ -181,7 +181,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 .value-item p { font-size: 15.5px; line-height: 1.6; color: var(--muted); margin: 0; }
 
 /* demo video */
-.demo { background: var(--bg); }
 .demo-frame {
   max-width: 460px; margin: 0 auto;
   border-radius: 20px; overflow: hidden;
@@ -191,6 +190,25 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 }
 .demo-frame video { width: 100%; display: block; }
 .demo-caption { text-align: center; font-size: 14px; color: var(--muted-soft); margin: 22px auto 0; max-width: 44ch; }
+
+/* pilot: demo (left) + join the pilot (right) */
+.pilot { background: var(--surface); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.pilot-lead {
+  text-align: center; max-width: 38ch; margin: 0 auto 56px;
+  font-family: var(--serif); font-size: clamp(21px, 2.4vw, 27px);
+  line-height: 1.4; color: oklch(30% 0.03 160);
+}
+.pilot-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+  max-width: 1040px; margin: 0 auto;
+}
+.pilot-col-head { margin-bottom: 26px; }
+.pilot-col-head h2 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.2; margin-top: 12px; color: oklch(20% 0.03 160); }
+.pilot-col-head p { color: var(--muted); font-size: 16px; margin: 12px 0 0; max-width: 42ch; }
+.pilot .demo-frame { max-width: 100%; }
+.pilot .signup-card { max-width: none; margin: 0; padding: 40px clamp(24px, 3vw, 44px); }
+.pilot .signup-head { text-align: left; margin-bottom: 26px; }
+.pilot .signup-head p { margin-left: 0; }
 
 /* dark network section */
 .network { background: var(--dark); color: white; }
@@ -265,11 +283,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
   .problem-grid { grid-template-columns: 1fr; gap: 40px; padding: 72px var(--pad); }
   .cards { grid-template-columns: 1fr; }
   .value-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pilot-grid { grid-template-columns: 1fr; gap: 48px; max-width: 560px; }
   .section { padding: 76px 0; }
 }
 @media (max-width: 560px) {
   :root { --pad: 22px; }
-  .hero-content { padding-bottom: 88px; }
+  .hero-content { padding-bottom: 44px; }
   .form-grid { grid-template-columns: 1fr; }
   .signup-card { padding: 40px 24px; }
   .footer .container { flex-direction: column; align-items: flex-start; }
