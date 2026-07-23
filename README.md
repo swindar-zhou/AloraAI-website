@@ -109,12 +109,29 @@ with the ready-to-click admin + CSV URLs) to the console at startup.
 
 ## Deploying
 
-This runs as a plain Node process, so it works on anything that runs Node 22.9+
-(a small VM, Render, Railway, Fly.io, etc.). Set `PORT`, `ADMIN_TOKEN`, `SUPABASE_URL`,
-and `SUPABASE_SERVICE_KEY` as environment variables in your host's dashboard (don't upload
-`.env`). With Supabase as the store, the host's disk can be ephemeral — your sign-ups live
-in Supabase, not on the server. If you put the app behind a reverse proxy / CDN, the
-sign-up IP is read from `X-Forwarded-For`.
+### Vercel (recommended — serverless)
+
+On Vercel the static site is served from `public/` and the API runs as serverless
+functions in `api/` (`api/signup.js`, `api/admin.js`, `api/export.js`). `server.js` is
+**not** used on Vercel — it's only the local dev server. Both share `lib/store.js`, so the
+behavior is identical. Because sign-ups live in Supabase, the functions are stateless.
+
+1. Push to GitHub (done).
+2. In Vercel: **Add New → Project → Import** `swindar-zhou/AloraAI-website`.
+   Framework preset **Other**; no build command or output dir needed.
+3. Add **Environment Variables** (Production + Preview):
+   `ADMIN_TOKEN`, `SUPABASE_URL`, `SUPABASE_SERVICE_KEY`.
+4. **Deploy.** `vercel.json` rewrites keep `/admin` and `/admin/export.csv` working.
+5. Set the project's **Node.js version to 22.x** (Settings → General) to match `engines`.
+
+Every `git push` to `main` then redeploys automatically.
+
+### Other hosts (persistent Node process)
+
+`server.js` also runs on anything with a persistent Node 22.9+ process (a small VM,
+Render, Railway, Fly.io). Set `PORT`, `ADMIN_TOKEN`, `SUPABASE_URL`, and
+`SUPABASE_SERVICE_KEY` as environment variables (don't upload `.env`). The sign-up IP is
+read from `X-Forwarded-For` when behind a proxy / CDN.
 
 ## Notes on the original files
 
