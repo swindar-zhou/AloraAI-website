@@ -140,12 +140,20 @@
   if (lines.length < 2) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+  const FADE_MS = 300;   // must match the CSS transition
+  const HOLD_MS = 5200;
+
   let i = 0;
   setInterval(() => {
+    // Fade the current line fully out BEFORE bringing the next one in.
+    // Overlapping the two fades renders both messages at once, since they
+    // occupy the same grid cell.
     lines[i].classList.remove('is-on');
-    i = (i + 1) % lines.length;
-    lines[i].classList.add('is-on');
-  }, 5200);
+    setTimeout(() => {
+      i = (i + 1) % lines.length;
+      lines[i].classList.add('is-on');
+    }, FADE_MS + 40);
+  }, HOLD_MS);
 })();
 
 /* ---------------------------------------------------------------------------

@@ -245,9 +245,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.015
   grid-area: 1 / 1;
   font-size: 15px; line-height: 1.5; margin: 0;
   color: rgba(255,255,255,.93);
-  opacity: 0; transition: opacity .45s ease;
+  /* Lines share a cell, so a CROSS-fade would render two messages on top of
+     each other. The swap is sequenced in JS instead: out, then in. */
+  opacity: 0; visibility: hidden;
+  transition: opacity .3s ease, visibility 0s linear .3s;
 }
-.agent-line.is-on { opacity: 1; }
+.agent-line.is-on {
+  opacity: 1; visibility: visible;
+  transition: opacity .3s ease, visibility 0s linear 0s;
+}
 .agent-note {
   display: block; margin-top: 12px;
   font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase;
