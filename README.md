@@ -44,7 +44,7 @@ signups.db              # local SQLite, created on first run if no Supabase (git
 1. **Hero** — full-viewport vintage photo, headline, sub-headline, two CTAs.
 2. **The problem** — the "calling facilities one by one" status quo.
 3. **How it works** — the two things Alora does on every call.
-4. **Why it matters** — the value proposition (four concrete wins for a case manager).
+4. **Why it matters** — the value proposition (four concrete wins for a transfer team).
 5. **See it work** — the embedded demo video.
 6. **Live in the workspace** — the network-map product visual.
 7. **Join the pilot** — the sign-up form.

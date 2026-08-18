@@ -131,6 +131,30 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 .hero-cta { display: flex; align-items: center; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
 
 /* ==========================================================================
+   VALUE PROP BAND — the one-line pitch, straight under the hero
+   ========================================================================== */
+.valueprop {
+  background: var(--dark);
+  padding: 76px 0;
+}
+.eyebrow-light { color: oklch(80% 0.06 155); }
+.valueprop-line {
+  font-family: var(--serif);
+  font-weight: 500; letter-spacing: -0.015em;
+  font-size: clamp(28px, 3.8vw, 46px);
+  line-height: 1.14;
+  color: white;
+  max-width: 20ch;
+  margin: 16px 0 0;
+}
+.valueprop-sub {
+  font-size: 16.5px; line-height: 1.65;
+  color: oklch(90% 0.012 150 / 0.72);
+  max-width: 56ch;
+  margin: 22px 0 0;
+}
+
+/* ==========================================================================
    SECTIONS — shared
    ========================================================================== */
 .section { padding: 104px 0; }
@@ -291,5 +315,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
   .hero-content { padding-bottom: 44px; }
   .form-grid { grid-template-columns: 1fr; }
   .signup-card { padding: 40px 24px; }
+  .valueprop { padding: 56px 0; }
+  .valueprop-line { max-width: none; }
   .footer .container { flex-direction: column; align-items: flex-start; }
 }
