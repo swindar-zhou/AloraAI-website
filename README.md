@@ -1,6 +1,6 @@
 # AloraAI — landing page + clinician pilot sign-up
 
-Production landing page for AloraAI (behavioral-health bed-placement coordination),
+Production landing page for AloraAI (bed-placement coordination),
 plus a small self-contained backend that collects clinician pilot sign-ups so you can
 distribute the list to a broader audience of clinicians who want to work with you.
 
