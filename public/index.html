@@ -84,6 +84,64 @@
     </div>
   </header>
 
+  <!-- ===================== SIGN-UP ===================== -->
+  <section class="section pilot" id="join">
+    <div class="container">
+      <div class="pilot-head">
+        <span class="eyebrow">Design partners</span>
+        <h2>Join the Alora pilot.</h2>
+        <p>
+          We&rsquo;re building this with a few teams who move patients every day. Leave your details
+          and we&rsquo;ll set up 20 minutes to hear how you work.
+        </p>
+      </div>
+
+      <div id="signup-form-wrap">
+        <div class="signup-card">
+          <form id="signup-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
+              </div>
+              <div class="field">
+                <label for="email">Work email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
+              </div>
+              <div class="field">
+                <label for="organization">Where you work <span class="opt">(optional)</span></label>
+                <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
+              </div>
+              <div class="field">
+                <label for="location">Location <span class="opt">(optional)</span></label>
+                <input type="text" id="location" name="location" placeholder="City or region you place in">
+              </div>
+              <div class="field full">
+                <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="signup-submit">Join the pilot</button>
+              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+              <p class="form-note">No patient data, no spam. Unsubscribe any time.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- success -->
+      <div id="signup-success" class="signup-card signup-success hidden">
+        <div class="check" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Thanks, you&rsquo;re on the list.</h3>
+        <p>We&rsquo;ll reach out shortly to find 20 minutes that works for you.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== PROBLEM ===================== -->
   <section class="section" id="problem">
     <div class="container">
@@ -547,64 +605,6 @@
                 aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Nursing</button>
       </div>
       <p class="hub-hint">Select a team to see what Alora gives them</p>
-    </div>
-  </section>
-
-  <!-- ===================== SIGN-UP ===================== -->
-  <section class="section pilot" id="join">
-    <div class="container">
-      <div class="pilot-head">
-        <span class="eyebrow">Design partners</span>
-        <h2>Join the Alora pilot.</h2>
-        <p>
-          We&rsquo;re building this with a few teams who move patients every day. Leave your details
-          and we&rsquo;ll set up 20 minutes to hear how you work.
-        </p>
-      </div>
-
-      <div id="signup-form-wrap">
-        <div class="signup-card">
-          <form id="signup-form" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
-              </div>
-              <div class="field">
-                <label for="email">Work email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
-              </div>
-              <div class="field">
-                <label for="organization">Where you work <span class="opt">(optional)</span></label>
-                <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
-              </div>
-              <div class="field">
-                <label for="location">Location <span class="opt">(optional)</span></label>
-                <input type="text" id="location" name="location" placeholder="City or region you place in">
-              </div>
-              <div class="field full">
-                <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
-                <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary" id="signup-submit">Join the pilot</button>
-              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
-              <p class="form-note">No patient data, no spam. Unsubscribe any time.</p>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- success -->
-      <div id="signup-success" class="signup-card signup-success hidden">
-        <div class="check" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <h3>Thanks, you&rsquo;re on the list.</h3>
-        <p>We&rsquo;ll reach out shortly to find 20 minutes that works for you.</p>
-      </div>
     </div>
   </section>
 
