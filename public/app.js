@@ -131,27 +131,20 @@
 })();
 
 /* ---------------------------------------------------------------------------
-   Hero agent card: cycles through what Alora surfaces during a placement call.
+   Hero agent card: cross-fades between what Alora surfaces during a call.
+   All lines are already in the DOM, stacked in one grid cell, so switching
+   costs no layout.
    ------------------------------------------------------------------------- */
 (function () {
-  const line = document.getElementById('agent-line');
-  if (!line) return;
+  const lines = Array.from(document.querySelectorAll('.agent-line'));
+  if (lines.length < 2) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const LINES = [
-    'Willow Glen has two beds open as of 9:14 a.m. Both accept this patient’s payer, and neither requires 1:1 observation.',
-    'Heads up: Bayview changed their intake rule on Tuesday. They now need a 72-hour negative culture before transfer.',
-    'That rules out six facilities before you dial. Want me to hold the Willow Glen bed while you finish the packet?',
-  ];
 
   let i = 0;
   setInterval(() => {
-    line.classList.add('is-fading');
-    setTimeout(() => {
-      i = (i + 1) % LINES.length;
-      line.textContent = LINES[i];
-      line.classList.remove('is-fading');
-    }, 450);
+    lines[i].classList.remove('is-on');
+    i = (i + 1) % lines.length;
+    lines[i].classList.add('is-on');
   }, 5200);
 })();
 

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260818">
+  <link rel="stylesheet" href="/styles.css?v=20260818b">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
         <a href="#how">How it works</a>
         <a href="#workflow">Workflow</a>
         <a href="#outcomes">Our value</a>
-        <a href="#join" class="btn btn-light">Help us build it</a>
+        <a href="#join" class="btn btn-light">Join the pilot</a>
       </div>
 
       <button type="button" class="nav-toggle" id="nav-toggle"
@@ -42,7 +42,7 @@
       <a href="#how">How it works</a>
       <a href="#workflow">Workflow</a>
       <a href="#outcomes">Our value</a>
-      <a href="#join" class="btn btn-primary nav-menu-cta">Help us build it</a>
+      <a href="#join" class="btn btn-primary nav-menu-cta">Join the pilot</a>
     </div>
   </nav>
 
@@ -59,20 +59,26 @@
         Built for everyone who moves a patient to the next setting of care: transfer centers,
         discharge planners, placement and intake teams, social workers, and case managers.
       </p>
-      <div class="hero-cta">
-        <a href="#join" class="btn btn-primary">Help us build it</a>
-      </div>
-
       <!-- Alora riding along on a placement call -->
       <figure class="agent-card">
         <figcaption class="agent-head">
           <span class="agent-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
           <span class="agent-name">Alora Agent</span>
         </figcaption>
-        <p class="agent-line" id="agent-line" aria-live="polite">
-          Willow Glen has two beds open as of 9:14 a.m. Both accept this patient&rsquo;s payer, and neither
-          requires 1:1 observation.
-        </p>
+        <div class="agent-lines">
+          <p class="agent-line is-on">
+            Willow Glen has two beds open as of 9:14 a.m. Both accept this patient&rsquo;s payer, and neither
+            requires 1:1 observation.
+          </p>
+          <p class="agent-line">
+            Heads up: Bayview changed their intake rule on Tuesday. They now need a 72-hour negative
+            culture before transfer.
+          </p>
+          <p class="agent-line">
+            That rules out six facilities before you dial. Want me to hold the Willow Glen bed while you
+            finish the packet?
+          </p>
+        </div>
         <span class="agent-note">Illustrative, not a real call</span>
       </figure>
     </div>
@@ -454,7 +460,7 @@
         <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span>Improved Patient Access</span></div>
       </div>
       <div class="capacity-cta">
-        <a href="#join" class="btn btn-primary">Help us build it</a>
+        <a href="#join" class="btn btn-primary">Join the pilot</a>
       </div>
     </div>
   </section>
@@ -548,8 +554,8 @@
   <section class="section pilot" id="join">
     <div class="container">
       <div class="pilot-head">
-        <span class="eyebrow">Help us build it</span>
-        <h2>Help us build Alora.</h2>
+        <span class="eyebrow">Design partners</span>
+        <h2>Join the Alora pilot.</h2>
         <p>
           We&rsquo;re building this with a few teams who move patients every day. Leave your details
           and we&rsquo;ll set up 20 minutes to hear how you work.
@@ -583,7 +589,7 @@
             </div>
 
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary" id="signup-submit">Help us build it</button>
+              <button type="submit" class="btn btn-primary" id="signup-submit">Join the pilot</button>
               <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
               <p class="form-note">No patient data, no spam. Unsubscribe any time.</p>
             </div>
@@ -639,6 +645,6 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=20260818"></script>
+  <script src="/app.js?v=20260818b"></script>
 </body>
 </html>
