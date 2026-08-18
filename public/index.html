@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AloraAI: Find the right bed in minutes, not a day of phone calls</title>
-  <meta name="description" content="Alora turns bed-placement phone calls into a living, sourced map of the care network, and matches each patient's chart against every facility's real requirements before you dial.">
+  <title>Alora: Operational intelligence that moves patients forward</title>
+  <meta name="description" content="Alora turns every placement call into a living, sourced map of the care network and matches each patient against every facility&#39;s real requirements, so transfer teams move patients in minutes, not a day of phone calls.">
 
+  <link rel="icon" href="/assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,157 +14,115 @@
 </head>
 <body>
 
-  <!-- ===================== HERO ===================== -->
-  <header class="hero">
-    <div class="hero-img">
-      <img src="/assets/hero-nurse.jpg" alt="A nurse coordinating a patient placement on the phone">
-    </div>
-    <div class="hero-scrim"></div>
-
-    <nav class="nav">
-      <span class="nav-brand">AloraAI</span>
+  <!-- ===================== NAV: fixed, persists on scroll ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top" aria-label="Alora home">
+        <img class="nav-logo" src="/assets/logo.png" alt="">
+        <span class="nav-word">ALORA</span>
+      </a>
       <div class="nav-links">
         <a href="#problem">The problem</a>
         <a href="#how">How it works</a>
-        <a href="#demo">Demo</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#outcomes">Our value</a>
         <a href="#join" class="btn btn-light">Help us build it</a>
       </div>
-    </nav>
+
+      <button type="button" class="nav-toggle" id="nav-toggle"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+      </button>
+    </div>
+
+    <div class="nav-menu" id="nav-menu" hidden>
+      <a href="#problem">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#outcomes">Our value</a>
+      <a href="#join" class="btn btn-primary nav-menu-cta">Help us build it</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-img">
+      <img src="/assets/hero-er.jpg" alt="Hospital staff moving a patient on a gurney through emergency department doors">
+    </div>
+    <div class="hero-scrim"></div>
 
     <div class="hero-content">
-      <h1>This is 1962. Finding an open bed still works exactly like this in 2026.</h1>
+      <h1>Operational intelligence that moves patients forward.</h1>
+      <p class="hero-sub">
+        Built for everyone who moves a patient to the next setting of care: transfer centers,
+        discharge planners, placement and intake teams, social workers, and case managers.
+      </p>
       <div class="hero-cta">
         <a href="#join" class="btn btn-primary">Help us build it</a>
       </div>
+
+      <!-- Alora riding along on a placement call -->
+      <figure class="agent-card">
+        <figcaption class="agent-head">
+          <span class="agent-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="agent-name">Alora Agent</span>
+        </figcaption>
+        <p class="agent-line" id="agent-line" aria-live="polite">
+          Willow Glen has two beds open as of 9:14 a.m. Both accept this patient&rsquo;s payer, and neither
+          requires 1:1 observation.
+        </p>
+        <span class="agent-note">Illustrative, not a real call</span>
+      </figure>
     </div>
   </header>
 
-  <!-- ===================== VALUE PROP BAND ===================== -->
-  <section class="valueprop">
-    <div class="container">
-      <span class="eyebrow eyebrow-light">What Alora is</span>
-      <p class="valueprop-line">Operational intelligence that moves patients forward.</p>
-      <p class="valueprop-sub">
-        Built for everyone who moves a patient to the next setting of care &mdash; transfer centers,
-        discharge planners, placement and intake teams, social workers, and case managers.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ PILOT: demo (left) + join the pilot (right) ============ -->
-  <section class="section pilot">
-    <div class="container">
-      <p class="pilot-lead">
-        Alora turns every placement call into a living map of the network, and finds the beds that fit
-        your patient before you dial.
-      </p>
-      <div class="pilot-grid">
-
-        <!-- LEFT — demo video -->
-        <div class="pilot-demo" id="demo">
-          <div class="pilot-col-head">
-            <span class="eyebrow">See it work</span>
-            <h2>Seven seconds inside Alora.</h2>
-            <p>How a placement search actually plays out.</p>
-          </div>
-          <div class="demo-frame">
-            <video
-              src="/assets/alora-demo.mp4"
-              poster="/assets/alora-demo-poster.jpg"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto"
-              controls>
-              Your browser doesn't support embedded video.
-              <a href="/assets/alora-demo.mp4">Download the demo</a>.
-            </video>
-          </div>
-          <p class="demo-caption">De-identified product footage. No patient data shown.</p>
-        </div>
-
-        <!-- RIGHT — join the pilot -->
-        <div class="pilot-join" id="join">
-          <div class="signup-card">
-            <!-- form -->
-            <div id="signup-form-wrap">
-              <div class="signup-head">
-                <span class="eyebrow">Help us build it</span>
-                <h2>Help us build Alora.</h2>
-                <p>
-                  We're building this with a few teams who move patients every day. Leave your details and we'll
-                  set up 20 minutes to hear how you work.
-                </p>
-              </div>
-
-              <form id="signup-form" novalidate>
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
-                  </div>
-                  <div class="field">
-                    <label for="email">Work email</label>
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
-                  </div>
-                  <div class="field">
-                    <label for="organization">Where you work <span class="opt">(optional)</span></label>
-                    <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
-                  </div>
-                  <div class="field">
-                    <label for="location">Location <span class="opt">(optional)</span></label>
-                    <input type="text" id="location" name="location" placeholder="City or region you place in">
-                  </div>
-                  <div class="field full">
-                    <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
-                    <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
-                  </div>
-                </div>
-
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-primary" id="signup-submit">Help us build it</button>
-                  <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
-                  <p class="form-note">
-                    No patient data, no spam. Unsubscribe any time.
-                  </p>
-                </div>
-              </form>
-            </div>
-
-            <!-- success -->
-            <div id="signup-success" class="signup-success hidden">
-              <div class="check" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              </div>
-              <h3>Thanks!</h3>
-              <p>We'll email you to set up 20 minutes. Talk soon.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ===================== PROBLEM ===================== -->
-  <section class="problem" id="problem">
-    <div class="problem-grid">
-      <div class="problem-stat">
-        <span class="eyebrow">The status quo</span>
-        <span class="num">1&nbsp;&times;&nbsp;1</span>
-        <span class="label">Every bed is still found by calling facilities one at a time.</span>
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The real bottleneck</span>
+        <h2 class="h-2tone">Healthcare doesn&rsquo;t have a documentation problem.<span class="tone">It has a coordination problem.</span></h2>
       </div>
-      <div class="problem-body">
-        <h2>Right now, finding a bed means calling facilities one by one.</h2>
-        <p>
-          A patient is ready to move, and whoever owns the transfer starts working the phones, hoping the bed count
-          someone quoted last week is still true, and that this facility still takes the patient's payer.
-        </p>
-        <p>
-          By the time a placement lands, the same facts have been re-learned from scratch, on hold, more than
-          once. Nothing about that call gets remembered for the next coordinator, or the next patient.
-        </p>
+
+      <div class="problem-grid">
+        <figure class="problem-photo">
+          <img src="/assets/problem-rush.jpg" alt="A care team moving a patient on a gurney down a hospital corridor" loading="lazy">
+        </figure>
+
+        <div class="problem-side">
+          <p class="problem-lead">
+            Every transition scatters what matters across phone calls, faxes, inboxes, and someone&rsquo;s
+            memory. Then it all gets re-learned from scratch on the next case.
+          </p>
+          <div class="scatter-viz">
+            <svg viewBox="0 0 320 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g stroke="#C9BCAB" stroke-width="1.6" stroke-dasharray="3 5" stroke-linecap="round">
+                <path d="M62 34h18M178 46h18M292 30h14M116 104h18M238 96h18"/>
+              </g>
+              <g fill="#DED3C4">
+                <circle cx="46" cy="34" r="11"/><circle cx="162" cy="46" r="11"/>
+                <circle cx="276" cy="30" r="11"/><circle cx="100" cy="104" r="11"/>
+                <circle cx="222" cy="96" r="11"/>
+              </g>
+              <g fill="#8B8177" font-family="Inter, system-ui, sans-serif" font-size="11.5">
+                <text x="46"  y="62"  text-anchor="middle">Calls</text>
+                <text x="162" y="74"  text-anchor="middle">Inboxes</text>
+                <text x="276" y="58"  text-anchor="middle">Memory</text>
+                <text x="100" y="132" text-anchor="middle">Faxes</text>
+                <text x="222" y="124" text-anchor="middle">Notes</text>
+              </g>
+            </svg>
+            <span class="scatter-cap">Five places the same fact lives. None of them talk.</span>
+          </div>
+          <ul class="cost-list">
+            <li><span class="cost-rule"></span>Longer boarding times</li>
+            <li><span class="cost-rule"></span>Delayed discharges</li>
+            <li><span class="cost-rule"></span>Underutilized beds</li>
+            <li><span class="cost-rule"></span>Slower access to care</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -173,67 +132,472 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">How it works</span>
-        <h2>Alora does two things on every call.</h2>
+        <h2>Built for how healthcare actually works.</h2>
+        <p>No rip-and-replace, no new system of record. Alora sits on the calls your team already makes and connects what each one learns.</p>
       </div>
-      <div class="cards">
-        <div class="card">
-          <div class="badge teal">1</div>
-          <h3>A living map of the network</h3>
-          <p>
-            Alora sits in on placement calls and understands what each facility says about open beds, waitlists,
-            payers, and intake requirements, then writes verified facts into a shared, always-current map.
-            A human approves every update.
-          </p>
-        </div>
-        <div class="card">
-          <div class="badge amber">2</div>
-          <h3>Chart-grounded matching</h3>
-          <p>
-            Alora diffs each patient's clinical record against every facility's real requirements, rides along
-            on the call, and surfaces chart-grounded answers, flagging anything the record doesn't support.
-          </p>
-        </div>
+
+      <div class="how-grid">
+        <figure class="how-photo">
+          <img src="/assets/how-corridor.jpg" alt="Clinical staff walking together through a hospital corridor" loading="lazy">
+        </figure>
+
+        <ol class="how-list">
+          <li class="how-item">
+            <span class="how-dot">01</span>
+            <div class="how-body">
+              <h3>Shared context</h3>
+              <p>Care teams work from one live operational view of every patient transition, closing the gaps between departments and organizations.</p>
+            </div>
+          </li>
+          <li class="how-item">
+            <span class="how-dot">02</span>
+            <div class="how-body">
+              <h3>Adaptive workflows</h3>
+              <p>Alora adapts to how your organization already coordinates care, not the other way around. No overhaul, no migration project.</p>
+            </div>
+          </li>
+          <li class="how-item">
+            <span class="how-dot">03</span>
+            <div class="how-body">
+              <h3>Cross-org coordination</h3>
+              <p>Hospitals, post-acute facilities, payers, and community providers all working off one operational layer.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <!-- ===================== VALUE PROP ===================== -->
-  <section class="section value" id="value">
+  <!-- ===================== WORKFLOW: sticky rail + scrolling cards ===================== -->
+  <section class="section flow" id="workflow">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Why it matters</span>
-        <h2>What a transfer team actually gets.</h2>
-        <p>Not another database to keep updated. A faster path to the right bed, and a memory the whole team keeps.</p>
+      <div class="flow-layout">
+
+        <!-- LEFT: sticky, vertically centred -->
+        <div class="flow-rail">
+          <div class="flow-rail-inner">
+            <span class="eyebrow">End-to-end workflow</span>
+            <h2>From calling to mapping.</h2>
+            <p class="flow-rail-lead">
+              Every step in the patient placement journey, and the friction Alora removes at each one.
+            </p>
+            <nav class="flow-index" aria-label="Placement workflow steps">
+            <a class="flow-index-item is-active" href="#step-referral" data-target="step-referral">
+              <span class="n">01</span><span class="t">Referral Call</span>
+            </a>
+            <a class="flow-index-item" href="#step-intake" data-target="step-intake">
+              <span class="n">02</span><span class="t">Clinical Intake</span>
+            </a>
+            <a class="flow-index-item" href="#step-search" data-target="step-search">
+              <span class="n">03</span><span class="t">Bed Search</span>
+            </a>
+            <a class="flow-index-item" href="#step-match" data-target="step-match">
+              <span class="n">04</span><span class="t">Placement Match</span>
+            </a>
+            <a class="flow-index-item" href="#step-auth" data-target="step-auth">
+              <span class="n">05</span><span class="t">Authorization</span>
+            </a>
+            <a class="flow-index-item" href="#step-handoff" data-target="step-handoff">
+              <span class="n">06</span><span class="t">Care Handoff</span>
+            </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- RIGHT: the cards that move past it -->
+        <div class="flow-cards">
+        <article class="flow-card" id="step-referral" data-step="referral">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">01 &middot; REFERRAL CALL</span>
+              <h3>Take the referral without losing the thread</h3>
+              <p class="flow-card-desc">The first call, where the case begins.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#D8CEC1" stroke-width="3.4" stroke-linecap="round">
+    <path d="M16 60v20M30 50v40M44 40v60M58 56v28M72 66v8"/>
+  </g>
+  <path d="M88 70h18m0 0-6-5m6 5-6 5" stroke="#E8875C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="122" y="36" width="82" height="68" rx="11" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="1.6"/>
+  <path d="M136 55h32" stroke="#E8875C" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M136 70h54M136 85h38" stroke="#E7DED2" stroke-width="3.4" stroke-linecap="round"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Details live in one person’s handwritten notes</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Key facts get re-asked on the next call</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>No record of what was actually promised</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>The next person starts the case from zero</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Every call captured and structured as it happens</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Verified facts written straight to the shared map</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>One thread the whole team can see</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Nothing gets re-learned from scratch</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="flow-card" id="step-intake" data-step="intake">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">02 &middot; CLINICAL INTAKE</span>
+              <h3>Capture what the patient needs</h3>
+              <p class="flow-card-desc">Everything the receiving facility will need to know.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#D8CEC1" stroke-width="3.4" stroke-linecap="round">
+    <path d="M14 44h34M26 60h30M16 76h44M30 92h22"/>
+  </g>
+  <path d="M88 70h18m0 0-6-5m6 5-6 5" stroke="#E8875C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="122" y="32" width="82" height="76" rx="11" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="1.6"/>
+  <path d="M136 50h52" stroke="#E8875C" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M136 64h52M136 78h52M136 92h34" stroke="#E7DED2" stroke-width="3.4" stroke-linecap="round"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Duplicate forms across every facility</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Missing clinical criteria checklists</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Manual payer verification</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Inconsistent acuity documentation</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>AI-structured intake in a single pass</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Clinical criteria auto-populated from the record</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Real-time payer eligibility check</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Standardized acuity scoring</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="flow-card" id="step-search" data-step="search">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">03 &middot; BED SEARCH</span>
+              <h3>Find where the patient fits</h3>
+              <p class="flow-card-desc">Working out which facilities can actually take this patient.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#E7DED2" stroke-width="1.6">
+    <path d="M44 44 110 70 44 100M110 70l62-30M110 70l62 32M110 70 78 26M110 70 86 114"/>
+  </g>
+  <g fill="#E7DED2">
+    <circle cx="44" cy="44" r="9"/><circle cx="44" cy="100" r="9"/>
+    <circle cx="78" cy="26" r="7"/><circle cx="86" cy="114" r="7"/>
+  </g>
+  <circle cx="110" cy="70" r="12" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="2"/>
+  <circle cx="172" cy="40" r="11" fill="#E8875C"/>
+  <circle cx="172" cy="102" r="11" fill="#E8875C"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>20+ phone calls per placement</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Stale census data and fax lookbacks</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>No payer or level-of-care filtering</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Hours lost chasing capacity that closed</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>A live bed board across the whole network</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Real-time census, sourced and timestamped</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Payer and level-of-care filters in one view</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Ranked match suggestions before you dial</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="flow-card" id="step-match" data-step="match">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">04 &middot; PLACEMENT MATCH</span>
+              <h3>Rank the beds that actually fit</h3>
+              <p class="flow-card-desc">Narrowing the network down to the beds worth calling.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="20" y="34" width="150" height="20" rx="10" fill="#E8875C"/>
+  <path d="M182 44h14m-7-7 7 7-7 7" stroke="#E8875C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="20" y="66" width="112" height="20" rx="10" fill="#E7DED2"/>
+  <rect x="20" y="98" width="78" height="20" rx="10" fill="#E7DED2"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Dial down a list and hope for a yes</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Real requirements discovered mid-call</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Rejections land after the packet is sent</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>No way to compare options side by side</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>A ranked shortlist before you pick up the phone</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Chart diffed against each facility’s real criteria</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Exclusions surfaced up front, with the reason</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Options compared side by side, every fact sourced</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="flow-card" id="step-auth" data-step="auth">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">05 &middot; AUTHORIZATION</span>
+              <h3>Clear the payer before it stalls</h3>
+              <p class="flow-card-desc">Getting the payer to yes before transport is booked.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="26" y="26" width="84" height="88" rx="10" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="1.6"/>
+  <path d="M42 50h52M42 66h52M42 82h30" stroke="#E7DED2" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M130 70h20m-8-8 8 8-8 8" stroke="#E7DED2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M178 26 208 38v26c0 22-30 34-30 34s-30-12-30-34V38l30-12z" fill="#FFFFFF" stroke="#E8875C" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="m168 62 8 8 16-16" stroke="#E8875C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Eligibility verified by phone, usually twice</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Missing documentation found late</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Denials discovered after transport is booked</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Status lives in somebody’s inbox</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Coverage checked against the live record</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Required documentation assembled up front</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Denial risk flagged before submission</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Auth status visible on the shared timeline</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="flow-card" id="step-handoff" data-step="handoff">
+          <div class="flow-card-top">
+            <div class="flow-card-lead">
+              <span class="flow-card-n">06 &middot; CARE HANDOFF</span>
+              <h3>Hand off with the whole picture</h3>
+              <p class="flow-card-desc">Moving the patient and the record together.</p>
+            </div>
+            <div class="flow-card-art"><svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="16" y="44" width="60" height="52" rx="10" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="1.6"/>
+  <path d="M30 62h32M30 76h20" stroke="#E7DED2" stroke-width="3" stroke-linecap="round"/>
+  <rect x="144" y="44" width="60" height="52" rx="10" fill="#FFFFFF" stroke="#D8CEC1" stroke-width="1.6"/>
+  <path d="M158 62h32M158 76h20" stroke="#E7DED2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88 70h44m-10-8 10 8-10 8" stroke="#E8875C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="98" y="52" width="24" height="24" rx="6" fill="#E8875C"/>
+</svg></div>
+          </div>
+          <div class="flow-compare">
+            <div class="flow-col without">
+              <span class="flow-col-label">Without Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Packets faxed, lost, and faxed again</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Receiving team calls back for the basics</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>No confirmation the patient actually landed</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span>Everything learned dies with the case</span></li>
+              </ul>
+            </div>
+            <div class="flow-col with">
+              <span class="flow-col-label">With Alora</span>
+              <ul>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>A complete packet sent once, in full</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Receiving facility sees the same live record</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Arrival confirmed and logged automatically</span></li>
+                <li><span class="m"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Every fact kept for the next placement</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        </div>
+
       </div>
-      <div class="value-grid">
-        <div class="value-item">
-          <span class="mark">&#10142;</span>
-          <div>
-            <h3>Placements in minutes, not a day on hold</h3>
-            <p>Start from a ranked shortlist of beds that are open now and take your patient's payer, instead of dialing down a list and re-verifying everything by phone.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CAPACITY BAND ===================== -->
+  <section class="capacity" id="outcomes">
+    <div class="container">
+      <span class="eyebrow capacity-eyebrow">Why it matters</span>
+      <h2><span class="line">Hospitals don&rsquo;t buy AI.</span><span class="tone">They buy capacity.</span></h2>
+      <p class="capacity-sub">Less coordination overhead. More patients moving through the system.</p>
+      <div class="capacity-grid">
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Shorter Length of Stay</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20V9M2 13h20v7"/><path d="M22 13a4 4 0 0 0-4-4h-8v4"/><circle cx="6.5" cy="11.5" r="1.5"/></svg></span><span>Reduced ED Boarding</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><rect x="5" y="12" width="3.5" height="6"/><rect x="10.25" y="8" width="3.5" height="10"/><rect x="15.5" y="4" width="3.5" height="14"/></svg></span><span>Higher Bed Utilization</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span>Faster Placement</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><span>Less Admin Work</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3-4 4 4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span><span>Fewer Transfer Delays</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span>Lower Regulatory Risk</span></div>
+        <div class="capacity-chip"><span class="m"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span>Improved Patient Access</span></div>
+      </div>
+      <div class="capacity-cta">
+        <a href="#join" class="btn btn-primary">Help us build it</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROLES: one hospital, every department ===================== -->
+  <section class="roles">
+    <div class="container">
+      <div class="roles-head">
+        <span class="eyebrow">Who it&rsquo;s for</span>
+        <h2>Multidisciplinary by design.</h2>
+        <p>Care coordination doesn&rsquo;t happen inside one department. Alora keeps every team aligned through every patient transition.</p>
+      </div>
+
+      <div class="hub">
+        <svg class="hub-spokes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="50" y1="50" x2="50.0" y2="14.0" />
+          <line x1="50" y1="50" x2="73.3" y2="24.6" />
+          <line x1="50" y1="50" x2="83.0" y2="50.0" />
+          <line x1="50" y1="50" x2="73.3" y2="75.4" />
+          <line x1="50" y1="50" x2="50.0" y2="86.0" />
+          <line x1="50" y1="50" x2="26.7" y2="75.4" />
+          <line x1="50" y1="50" x2="17.0" y2="50.0" />
+          <line x1="50" y1="50" x2="26.7" y2="24.6" />
+        </svg>
+
+        <div class="hub-core" id="hub-core">
+          <div class="hub-core-inner">
+            <span class="hub-face hub-face-front">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8.5L12 4l8 4.5V21"/><path d="M2 21h20"/><path d="M12 9.5v5M9.5 12h5"/><path d="M9 21v-4h6v4"/></svg>
+              <span class="hub-core-label">One hospital</span>
+            </span>
+            <span class="hub-face hub-face-back">
+            <span class="hub-back-item" data-dept="transfer" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3-4 4 4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span>
+              <span class="hub-back-line">Every transfer, one thread</span>
+            </span>
+            <span class="hub-back-item" data-dept="case" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+              <span class="hub-back-line">The whole case, one view</span>
+            </span>
+            <span class="hub-back-item" data-dept="ur" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <span class="hub-back-line">Justified against real criteria</span>
+            </span>
+            <span class="hub-back-item" data-dept="ops" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><rect x="5" y="12" width="3.5" height="6"/><rect x="10.25" y="8" width="3.5" height="10"/><rect x="15.5" y="4" width="3.5" height="14"/></svg></span>
+              <span class="hub-back-line">Capacity you can actually see</span>
+            </span>
+            <span class="hub-back-item" data-dept="discharge" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h5a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span>
+              <span class="hub-back-line">Discharge stops waiting on calls</span>
+            </span>
+            <span class="hub-back-item" data-dept="intake" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></span>
+              <span class="hub-back-line">Intake structured in one pass</span>
+            </span>
+            <span class="hub-back-item" data-dept="social" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M20.5 8.5a2.2 2.2 0 0 0-3.2 0l-.3.3-.3-.3a2.2 2.2 0 1 0-3.2 3l3.5 3.5 3.5-3.5a2.2 2.2 0 0 0 0-3z"/></svg></span>
+              <span class="hub-back-line">Less phone time, more patient time</span>
+            </span>
+            <span class="hub-back-item" data-dept="nursing" hidden>
+              <span class="hub-back-ico"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span>
+              <span class="hub-back-line">No re-explaining the same patient</span>
+            </span>
+            </span>
           </div>
         </div>
-        <div class="value-item">
-          <span class="mark">&#10142;</span>
-          <div>
-            <h3>Fewer dead-end calls</h3>
-            <p>Alora rules out facilities that are full, out-of-network, or can't meet the patient's clinical needs before you ever dial, so the calls you do make are the ones that count.</p>
-          </div>
+
+        <button type="button" class="hub-node" data-dept="transfer" style="left:50.0%; top:14.0%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Transfer Centers</button>
+        <button type="button" class="hub-node" data-dept="case" style="left:73.3%; top:24.6%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Case Management</button>
+        <button type="button" class="hub-node" data-dept="ur" style="left:83.0%; top:50.0%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Utilization Review</button>
+        <button type="button" class="hub-node" data-dept="ops" style="left:73.3%; top:75.4%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Hospital Operations</button>
+        <button type="button" class="hub-node" data-dept="discharge" style="left:50.0%; top:86.0%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Discharge Planning</button>
+        <button type="button" class="hub-node" data-dept="intake" style="left:26.7%; top:75.4%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Intake Teams</button>
+        <button type="button" class="hub-node" data-dept="social" style="left:17.0%; top:50.0%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Social Work</button>
+        <button type="button" class="hub-node" data-dept="nursing" style="left:26.7%; top:24.6%"
+                aria-controls="hub-core" aria-pressed="false"><span class="dot"></span>Nursing</button>
+      </div>
+      <p class="hub-hint">Select a team to see what Alora gives them</p>
+    </div>
+  </section>
+
+  <!-- ===================== SIGN-UP ===================== -->
+  <section class="section pilot" id="join">
+    <div class="container">
+      <div class="pilot-head">
+        <span class="eyebrow">Help us build it</span>
+        <h2>Help us build Alora.</h2>
+        <p>
+          We&rsquo;re building this with a few teams who move patients every day. Leave your details
+          and we&rsquo;ll set up 20 minutes to hear how you work.
+        </p>
+      </div>
+
+      <div id="signup-form-wrap">
+        <div class="signup-card">
+          <form id="signup-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jordan Rivera" required>
+              </div>
+              <div class="field">
+                <label for="email">Work email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="jordan@hospital.org" required>
+              </div>
+              <div class="field">
+                <label for="organization">Where you work <span class="opt">(optional)</span></label>
+                <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Hospital or facility">
+              </div>
+              <div class="field">
+                <label for="location">Location <span class="opt">(optional)</span></label>
+                <input type="text" id="location" name="location" placeholder="City or region you place in">
+              </div>
+              <div class="field full">
+                <label for="linkedin">LinkedIn <span class="opt">(optional, helps us learn about you)</span></label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/you">
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="signup-submit">Help us build it</button>
+              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+              <p class="form-note">No patient data, no spam. Unsubscribe any time.</p>
+            </div>
+          </form>
         </div>
-        <div class="value-item">
-          <span class="mark">&#10142;</span>
-          <div>
-            <h3>A shared memory for your team</h3>
-            <p>What one coordinator learns on a call, the whole team keeps: capacity, a new intake rule, a payer change. Nothing gets re-learned from scratch.</p>
-          </div>
+      </div>
+
+      <!-- success -->
+      <div id="signup-success" class="signup-card signup-success hidden">
+        <div class="check" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         </div>
-        <div class="value-item">
-          <span class="mark">&#10142;</span>
-          <div>
-            <h3>Audit-ready by design</h3>
-            <p>Every fact traces back to a specific call, a person, and a timestamp. A human approves each update and makes every clinical decision. No patient data leaves your retention.</p>
-          </div>
-        </div>
+        <h3>Thanks, you&rsquo;re on the list.</h3>
+        <p>We&rsquo;ll reach out shortly to find 20 minutes that works for you.</p>
       </div>
     </div>
   </section>
@@ -241,8 +605,37 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <span class="footer-brand">AloraAI</span>
-      <span class="footer-trust">A human approves every graph update and makes every clinical decision. No patient data leaves the hospital's own retention.</span>
+      <div class="footer-top">
+        <div class="footer-id">
+          <span class="footer-brand">
+            <img src="/assets/logo.png" alt="">
+            ALORA
+          </span>
+          <p class="footer-value">Operational intelligence that moves patients forward.</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-social" href="https://www.linkedin.com/company/call-alora/"
+             target="_blank" rel="noopener noreferrer" aria-label="Alora on LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="footer-social" href="mailto:hazel@call-alora.com" aria-label="Email Alora at hazel@call-alora.com">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>
+          Alora is care-coordination software. It does not practice medicine, provide medical advice,
+          or make clinical decisions. A qualified professional reviews every update and makes every
+          placement and clinical decision. Product capabilities described on this page are under active
+          development and are not a warranty of performance. No patient data leaves your
+          organization&rsquo;s own retention.
+        </p>
+        <p class="footer-copy">&copy; 2026 ALORA AI INC &middot; All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
