@@ -2,6 +2,14 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/agent",
+      "destination": "https://alora-call-pilot.vercel.app/"
+    },
+    {
+      "source": "/agent/:path*",
+      "destination": "https://alora-call-pilot.vercel.app/:path*"
+    },
+    {
       "source": "/map",
       "destination": "https://alora-map.vercel.app/"
     },
